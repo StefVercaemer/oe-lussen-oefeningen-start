@@ -1,0 +1,19 @@
+﻿<Window x:Class="_04_Lotto.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_Lotto.Wpf"
+        mc:Ignorable="d"
+        Title="Lotto" Height="450" Width="630.297">
+    <Grid>
+        <Label Content="Aantal getallen" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="Hoogste getal" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="btnTrekking" Content="Trekking" HorizontalAlignment="Left" Margin="263,47,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnRaden" Content="Raden" HorizontalAlignment="Left" Margin="263,90,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox x:Name="lstTrekkingen" HorizontalAlignment="Left" Height="362" Margin="379,47,0,0" VerticalAlignment="Top" Width="227"/>
+        <Label Content="Trekkingen" HorizontalAlignment="Left" Margin="379,10,0,0" VerticalAlignment="Top" Width="126"/>
+        <ListBox x:Name="lstAantalGetallen" HorizontalAlignment="Left" Height="185" Margin="49,47,0,0" VerticalAlignment="Top" Width="54"/>
+        <ListBox x:Name="lstHoogsteGetal" HorizontalAlignment="Left" Height="185" Margin="157,47,0,0" VerticalAlignment="Top" Width="54"/>        
+    </Grid>
+</Window>

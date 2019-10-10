@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfTekstOmkering.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTekstOmkering"
+        mc:Ignorable="d"
+        Title="Spelen met tekst" Height="457.039" Width="384.11">
+    <Grid>
+        <Grid Margin="10,10,10,282" Background="#FFF6F9BD">
+            <Label Content="Geef hieronder tekst in" HorizontalAlignment="Left" VerticalAlignment="Top" Width="257"/>
+            <TextBox x:Name="txtOmTeKeren" HorizontalAlignment="Left" Height="23" Margin="0,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356"/>
+            <Button x:Name="btnOmkeren" Content="Omkeren" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top" Width="75" />
+            <Label x:Name="lblOmgekeerd" Content="Omgekeerde tekst" HorizontalAlignment="Left" Margin="0,98,0,0" VerticalAlignment="Top" Width="356"/>
+        </Grid>
+        <TextBlock x:Name="tbkAlfabet" HorizontalAlignment="Left" Margin="10,265,0,0" TextWrapping="Wrap" Text="Alfabet:" VerticalAlignment="Top" Height="81" Width="356" Foreground="#FF083EF5">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF7FCAF5" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Label Content="Laat via een klik op de knop het alfabet verschijnen. &#xD;&#xA;Zie instructies op de knoppen." HorizontalAlignment="Left" Margin="11,161,0,0" VerticalAlignment="Top" Width="355"/>
+        <Button x:Name="btnKleineLetters" Content="Kleine &#xD;&#xA;letters" HorizontalAlignment="Left" Margin="11,215,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="btnGroteLetters" Content="Hoofd&#xA;letters" HorizontalAlignment="Left" Margin="91,215,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnZnaarA" Content="Van Z &#xD;&#xA;naar A" HorizontalAlignment="Left" Margin="171,215,0,0" VerticalAlignment="Top" Width="75" Height="36"/>
+
+    </Grid>
+</Window>

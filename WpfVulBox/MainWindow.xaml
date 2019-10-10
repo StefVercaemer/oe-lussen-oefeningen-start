@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfVulBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfVulBox"
+        mc:Ignorable="d"
+        Title="Getallenlijsten" Height="433.595" Width="395" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Van" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtVan" HorizontalAlignment="Left" Height="23" Margin="44,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" HorizontalContentAlignment="Right" TabIndex="10"/>
+        <Label Content="Tot" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTot" HorizontalAlignment="Left" Height="23" Margin="142,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" HorizontalContentAlignment="Right" TabIndex="20"/>
+        <Button x:Name="btnVulListBox" Content="Vul &#xA;Listbox &#xD;&#xA;Opklimmend" HorizontalAlignment="Left" Margin="17,54,0,0" VerticalAlignment="Top" Width="75" Height="76"  TabIndex="40" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnVulComboBox" Content="Vul &#xA;Combobox&#xD;&#xA;Afdalend" HorizontalAlignment="Left" Margin="115,54,0,0" VerticalAlignment="Top" Width="75" Height="76" TabIndex="50"  HorizontalContentAlignment="Center"/>
+        <ListBox x:Name="lstGetallenlijst" HorizontalAlignment="Left" Height="201" Margin="17,156,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cmbGetallenLijst" HorizontalAlignment="Left" Margin="115,156,0,0" VerticalAlignment="Top" Width="75" Height="21" HorizontalContentAlignment="Right"/>
+        <Label Content="Sprong" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSprong" HorizontalAlignment="Left" Height="23" Margin="267,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" HorizontalContentAlignment="Right" TabIndex="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="213,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="337" Width="155" FontSize="11"><Run Text="Opdracht:"/><LineBreak/><Run Text="Lijn al getallen rechts uit."/><LineBreak/><Run/><LineBreak/><Run Text="Schrijf "/><Run Text="code "/><Run Text="waarmee "/><Run Text="lstGetallenLijst"/><Run Text=" gevuld wordt met een reeks getallen van - tot, met"/><Run Text=" "/><Run Text="als sprong het getal in txtSprong. "/><LineBreak/><Run/><LineBreak/><Run Text="Schrijf "/><Run Text="code "/><Run Text="waarmee "/><Run Text="cmbGetallenLijst "/><Run Text="gevuld wordt met een reeks getallen van - tot, met"/><Run Text=" "/><Run Text="als sprong het getal in txtSprong. "/><Run Text="Hier tel je af van een hoger naar een lager getal."/><LineBreak/><Run/></TextBlock>
+    </Grid>
+</Window>
