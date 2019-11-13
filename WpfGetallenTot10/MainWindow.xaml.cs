@@ -27,12 +27,17 @@ public partial class MainWindow : Window
 
     private void btnToonGetallen_Click(object sender, RoutedEventArgs e)
     {
-        
+            //Toon de getallen van 1 t.e.m. 10 in lstGetallen
+            lstGetallen.Items.Clear();
+            for (int i = 1; i < 11; i++)
+            {
+                lstGetallen.Items.Add(i);
+            }
     }
 
     private void btnReset_Click(object sender, RoutedEventArgs e)
     {
-        
-    }
+            lstGetallen.Items.Clear();
+        }
 }
 }

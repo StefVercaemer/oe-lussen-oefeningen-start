@@ -11,8 +11,8 @@
         <TextBox x:Name="txtVan" HorizontalAlignment="Left" Height="23" Margin="44,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" HorizontalContentAlignment="Right" TabIndex="10"/>
         <Label Content="Tot" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtTot" HorizontalAlignment="Left" Height="23" Margin="142,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" HorizontalContentAlignment="Right" TabIndex="20"/>
-        <Button x:Name="btnVulListBox" Content="Vul &#xA;Listbox &#xD;&#xA;Opklimmend" HorizontalAlignment="Left" Margin="17,54,0,0" VerticalAlignment="Top" Width="75" Height="76"  TabIndex="40" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btnVulComboBox" Content="Vul &#xA;Combobox&#xD;&#xA;Afdalend" HorizontalAlignment="Left" Margin="115,54,0,0" VerticalAlignment="Top" Width="75" Height="76" TabIndex="50"  HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnVulListBox" Content="Vul &#xA;Listbox &#xD;&#xA;Opklimmend" HorizontalAlignment="Left" Margin="17,54,0,0" VerticalAlignment="Top" Width="75" Height="76"  TabIndex="40" HorizontalContentAlignment="Center" Click="btnVulListBox_Click"/>
+        <Button x:Name="btnVulComboBox" Content="Vul &#xA;Combobox&#xD;&#xA;Afdalend" HorizontalAlignment="Left" Margin="115,54,0,0" VerticalAlignment="Top" Width="75" Height="76" TabIndex="50"  HorizontalContentAlignment="Center" Click="btnVulComboBox_Click"/>
         <ListBox x:Name="lstGetallenlijst" HorizontalAlignment="Left" Height="201" Margin="17,156,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right"/>
         <ComboBox x:Name="cmbGetallenLijst" HorizontalAlignment="Left" Margin="115,156,0,0" VerticalAlignment="Top" Width="75" Height="21" HorizontalContentAlignment="Right"/>
         <Label Content="Sprong" HorizontalAlignment="Left" Margin="213,10,0,0" VerticalAlignment="Top"/>
