@@ -47,6 +47,7 @@ namespace _07_Controls
             //Overloop alle controls in grdMainGrid (gebruik de property Children)
             //Maak alle labels die een naam hebben en alle textboxen leeg
             //Maak de selectie in cmbJaNee ongedaan
+
         }
 
         private void CmbJaNee_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 WpfTafels", "WpfTafels\03 WpfTafels.csproj", "{692C47BC-B88E-470D-AA8F-A88731B5E37D}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Lotto.Wpf", "04 Lotto.Wpf\04 Lotto.Wpf.csproj", "{1563B6D7-4641-4B39-AD70-DCA0C6E56C3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 Controls", "07 Controls\07 Controls.csproj", "{8439B644-FA19-4E5F-8D55-14334FFA16F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetterZoeker.Wpf", "LetterZoeker.Wpf\LetterZoeker.Wpf.csproj", "{F67F0210-82AF-4080-B522-279B162ABA54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{8439B644-FA19-4E5F-8D55-14334FFA16F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8439B644-FA19-4E5F-8D55-14334FFA16F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8439B644-FA19-4E5F-8D55-14334FFA16F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F67F0210-82AF-4080-B522-279B162ABA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67F0210-82AF-4080-B522-279B162ABA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67F0210-82AF-4080-B522-279B162ABA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67F0210-82AF-4080-B522-279B162ABA54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
