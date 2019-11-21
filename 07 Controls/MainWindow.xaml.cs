@@ -25,10 +25,61 @@ namespace _07_Controls
             InitializeComponent();
         }
 
+        void WisInput(Panel panel)
+        {
+            foreach (object control in panel.Children)
+            {
+                Type type = control.GetType();
+                if (type == (typeof(Label)))
+                {
+                    Label label = (Label)control;
+                    if (label.Name.Length > 0)
+                    {
+                        label.Content = "";
+                    }
+                }
+                else if (type == (typeof(TextBox)))
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = "";
+                }
+                else if (type == (typeof(TextBlock)))
+                {
+                    TextBlock textBlock = (TextBlock)control;
+                    textBlock.Text = "";
+                }
+                else if (type == (typeof(ComboBox)))
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    comboBox.SelectedIndex = -1;
+                }
+                else if (type == (typeof(ListBox)))
+                {
+                    ListBox listBox = (ListBox)control;
+                    listBox.SelectedIndex = -1;
+                }
+            }
+        }
+
         private void BtnTextBoxen_Click(object sender, RoutedEventArgs e)
         {
-            //Toon de naam van alle textboxen in tbkFeedBack
+            string info = "";
+            foreach (object control in grdMainGrid.Children)
+            {
+                Type type;
+                type = control.GetType();
+                if (type == typeof(TextBox))
+                {
+                    TextBox textBox = (TextBox)control;
+                    info += textBox.Name + "\n";
+                }
+            }
+            tbkFeedBack.Text = info;
+        }
 
+        private void BtnWisInPut_Click(object sender, RoutedEventArgs e)
+        {
+            WisInput(grdMainGrid);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -42,13 +93,6 @@ namespace _07_Controls
             cmbJaNee.SelectedIndex = 0;
         }
 
-        private void BtnWisInPut_Click(object sender, RoutedEventArgs e)
-        {
-            //Overloop alle controls in grdMainGrid (gebruik de property Children)
-            //Maak alle labels die een naam hebben en alle textboxen leeg
-            //Maak de selectie in cmbJaNee ongedaan
-
-        }
 
         private void CmbJaNee_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

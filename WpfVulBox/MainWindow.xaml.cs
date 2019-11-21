@@ -50,7 +50,6 @@ namespace WpfVulBox
             }
             catch (Exception)
             {
-
                 Title = "Geef geldige getallen";
             }
 
@@ -80,7 +79,6 @@ namespace WpfVulBox
             }
             catch (Exception)
             {
-
                 Title = "Geef geldige getallen";
             }
         }

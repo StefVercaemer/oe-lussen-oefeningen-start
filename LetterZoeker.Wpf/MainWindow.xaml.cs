@@ -29,31 +29,37 @@ namespace LetterZoeker.Wpf
         {
             string tekst = txtTekst.Text;
             char gezochtTeken = 'A';
-            char teken = (char)66;
+            int positie = GeefPositie(tekst, gezochtTeken);
+
+            if (positie == 0)
+            {
+                tbkFeedback.Text = "Het teken " +  gezochtTeken + " is niet gevonden";
+            }
+            else
+            {
+                tbkFeedback.Text = $"Het teken {gezochtTeken} staat op plaats {positie}";
+            }
+        }
+
+        int GeefPositie(string tekst, char gezochtTeken)
+        {
             int teller = 0;
             int positie = 0;
             int lengte = tekst.Length;
+            char teken = (char)1;
             if (lengte > 0)
             {
-                while (gezochtTeken != teken &&  teller < lengte)
+                while (gezochtTeken != teken && teller < lengte)
                 {
                     teken = tekst[teller];
                     if (gezochtTeken == teken)
                     {
                         positie = teller + 1;
-                     }
+                    }
                     teller++;
                 }
             }
-
-            if (positie == 0)
-            {
-                Console.WriteLine(gezochtTeken.ToString() + " is niet gevonden");
-            }
-            else
-            {
-                Console.WriteLine($"Het {teken} staat op plaats {positie}");
-            }
+            return positie;
         }
     }
 }

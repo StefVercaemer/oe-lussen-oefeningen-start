@@ -8,17 +8,16 @@
         Title="Lustig lussen" Height="450" Width="520">
     <Grid>
         <ListBox x:Name="lstFruit" HorizontalAlignment="Left" Height="81" Margin="131,10,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="btnFruit" Content="Toon fruit " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Height="38"  Background="#FFF0F589"/>
-        <Button x:Name="btnPareGetallen" Content="Pare &#xD;&#xA;getallen" HorizontalAlignment="Left" Margin="9,199,0,0" VerticalAlignment="Top" Width="68" Height="45" />
-        <Button x:Name="btnEerstePunt" Content="Waar staat &#xA;de eerste &#xA;punt?" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top" Width="100" Height="57" />
+        <Button x:Name="btnFruit" Content="Toon fruit " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Height="38" Click="btnFruit_Click" Background="#FFF0F589"/>
+        <Button x:Name="btnPareGetallen" Content="Pare &#xD;&#xA;getallen" HorizontalAlignment="Left" Margin="9,199,0,0" VerticalAlignment="Top" Width="68" Height="45" Click="btnPareGetallen_Click"/>
+        <Button x:Name="btnEerstePunt" Content="Waar staat &#xA;de eerste &#xA;punt?" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top" Width="100" Height="57" Click="btnEerstePunt_Click" />
         <Label x:Name="lblTekst" Content="Doorloop lblTekst tot de eerste punt.&#xA;Via een messagebox laat je weten op welke &#xA;positie die punt staat." HorizontalAlignment="Left" Margin="131,348,0,0" VerticalAlignment="Top" Height="57" Width="255"/>
         <TextBlock HorizontalAlignment="Left" Margin="341,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="93" Width="153" Background="#FFF0F589" Padding="5"><Run Text="Zorg ervoor dat"/><Run Text=" de"/><Run Text=" "/><Run Text="array fruitmand getoond wordt in lstDemo1"/><Run Text="."/><LineBreak/><Run Text="Toon ze ook in een vertikale lijst in lblFruit."/></TextBlock>
         <ListBox x:Name="lstGetallen" HorizontalAlignment="Left" Height="139" Margin="131,200,0,0" VerticalAlignment="Top" Width="87"/>
         <Label x:Name="lblFruitmand" Content="Fruitmand" HorizontalAlignment="Left" Margin="223,10,0,0" VerticalAlignment="Top" Height="81" Width="110" BorderBrush="Black"/>
-        <Button x:Name="btnPeerPlaats" Content="Zoek de&#xD;&#xA;peer" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="68" Height="45" Background="#FFFBD1A7" />
+        <Button x:Name="btnPeerPlaats" Content="Zoek de&#xD;&#xA;peer" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="68" Height="45" Background="#FFFBD1A7" Click="btnPeerPlaats_Click" />
         <TextBlock x:Name="tbkZoekPeer" HorizontalAlignment="Left" Margin="341,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="153" Background="#FFFBD1A7" Padding="5"><Run Text="Sorteer de array fruitmand"/><Run Text=" en toon in lstFruit"/><Run Text=". "/><LineBreak/><Run Text="Z"/><Run Text="oek op welke plaats de peer staat"/><Run Text=" en toon in lblFruitPlaats"/></TextBlock>
         <Label x:Name="lblPeerPlaats" Content="Plaats fruit" HorizontalAlignment="Left" Margin="132,114,0,0" VerticalAlignment="Top" Height="56" Width="173" BorderBrush="Black"/>
         <TextBlock HorizontalAlignment="Left" Margin="341,200,0,0" TextWrapping="Wrap" Text="Toon de pare getallen tot met met 20 in lstGetallen." VerticalAlignment="Top" Height="66" Width="153" Padding="5" Background="#FFDDDDDD"/>
-
     </Grid>
 </Window>
