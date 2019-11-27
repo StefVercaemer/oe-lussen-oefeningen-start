@@ -32,9 +32,9 @@ M.a.w. de computer maakt telkens een array aan met hetzelfde aantal elementen al
 
 Het aantal pogingen wordt bijgehouden.
 
-Er wordt een string opgebouwd met het aantal pogingen en de te raden getallen (gescheiden door koppeltekens). 
+Er wordt een list van strings opgebouwd met de gegokte getallen (gescheiden door koppeltekens). 
 
-Deze string wordt geretourneerd.
+Deze list wordt geretourneerd.
 ### RadenKan
 Deze methode zal op basis van een parameter die aanduidt of raden toegelaten is de buttons btnTrekking en btnRaden in- of uitschakelen.
 ##	Event Handler Methodes
