@@ -40,6 +40,31 @@ namespace _04_Lotto.Wpf
             {
                 lstHoogsteGetal.Items.Add(i);
             }
+            BeginSituatie(true);
+            btnTrekking.IsEnabled = false;
+        }
+
+        void BeginSituatie(bool getalKeuzeMogelijk)
+        {
+            btnRaden.IsEnabled = !getalKeuzeMogelijk;
+            lstHoogsteGetal.IsEnabled = getalKeuzeMogelijk;
+            lstAantalGetallen.IsEnabled = getalKeuzeMogelijk;
+        }
+
+        void CheckSelectieGetallen()
+        {
+            int? aantalGetallen = (int?)lstAantalGetallen.SelectedItem;
+            int? hoogsteGetal = (int?)lstHoogsteGetal.SelectedItem;
+            if (aantalGetallen != null &&
+                hoogsteGetal != null &&
+                hoogsteGetal >= aantalGetallen)
+            {
+                btnTrekking.IsEnabled = true;
+            }
+            else
+            {
+                btnTrekking.IsEnabled = false;
+            }
         }
 
         int[] GeefReeksWillekeurigeGetallen(int aantalGetallen, int maxWaarde)
@@ -65,36 +90,51 @@ namespace _04_Lotto.Wpf
             int aantalGetallen = (int)lstAantalGetallen.SelectedItem;
             maxGetal = (int)lstHoogsteGetal.SelectedItem;
             teRaden = GeefReeksWillekeurigeGetallen(aantalGetallen, maxGetal);
+            btnTrekking.IsEnabled = false;
+            BeginSituatie(false);
+
         }
 
         private void btnRaden_Click(object sender, RoutedEventArgs e)
         {
+            List<string> pogingen = GeefRaadPogingen();
+            lstTrekkingen.ItemsSource = pogingen;
+            lstTrekkingen.Items.Refresh();
 
+            lstAantalGetallen.SelectedIndex = -1;
+            lstHoogsteGetal.SelectedIndex = -1;
+            BeginSituatie(true);
+        }
+
+
+        List<string> GeefRaadPogingen()
+        {
+            int[] gokjes;
+            string gokString;
+            string teRadenString = String.Join("|", teRaden);
+            List<string> feedback = new List<string>();
+            int teller = 0;
             //maak een array met gegokte getallen
-            int[] gokjes = GeefReeksWillekeurigeGetallen(teRaden.Length, maxGetal);
-            /*int[] gokjes = new int[teRaden.Length];
-            for (int i = 0; i < gokjes.Length; i++)
+            do
             {
-                int gok;
-                do
-                {
-                    gok = random.Next(1, maxGetal + 1);
-                    //Console.WriteLine(gok);
-                } while (gokjes.Contains(gok));
-                gokjes[i] = gok;
-            }
-            Array.Sort(gokjes);
-            Console.WriteLine(String.Join(" - ", gokjes));
-            */
-            if (teRaden == gokjes)
-            {
-                Console.WriteLine("Geraden");
-            }
-            //zorg dat de gokken uniek zijn
-            //sorteer ze
-            //vergelijk met teRaden
-            //blijf dit doen tot je het geraden hebt
+                gokjes = GeefReeksWillekeurigeGetallen(teRaden.Length, maxGetal);
+                gokString = (String.Join("|", gokjes));
+                feedback.Add(String.Join(" - ", gokjes));
+                teller++;
 
+            } while (gokString != teRadenString && teller <= 1000);
+            Console.WriteLine("Aantal pogingen: " + teller);
+            return feedback;
+        }
+
+        private void lstAantalGetallen_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CheckSelectieGetallen();
+        }
+
+        private void lstHoogsteGetal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CheckSelectieGetallen();
         }
     }
 }

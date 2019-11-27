@@ -67,9 +67,6 @@ namespace WpfTafels
 
         private void btnAlleTafels_Click(object sender, RoutedEventArgs e)
         {
-            //Maak lstTafels leeg
-            //Vul lstTafels met de tafels van 1 ==> 10
-            //Onder elke tafel komt een lijn
             lstTafels.Items.Clear();
 
             for (int tafel = 1; tafel < 11; tafel++)
